@@ -1,10 +1,10 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
-import { Homepage } from "./home/HomePage";
-import { Aboutpage } from "./about/AboutPage";
-import { Header } from "./common/header";
-import { pageNotFound } from "./PageNotFound";
-import { CoursePageFunc } from "./courses/CoursesPage";
+import { Homepage } from "./components/home/HomePage";
+import { Aboutpage } from "./components/about/AboutPage";
+import { Header } from "./components/common/header";
+import { pageNotFound } from "./components/PageNotFound";
+import { CoursesPage } from "./components/courses/CoursesPage";
 
 export default function App() {
   return (
@@ -13,7 +13,7 @@ export default function App() {
       <Switch>
         <Route exact path="/" component={Homepage} />
         <Route path="/about" component={Aboutpage} />
-        <Route path="/courses" component={CoursePageFunc} />
+        <Route path="/courses" component={CoursesPage} />
         <Route component={pageNotFound} />
       </Switch>
     </div>
