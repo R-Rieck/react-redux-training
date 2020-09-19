@@ -1,0 +1,79 @@
+.content-input-container {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.content-input-container > input[type="text"] {
+  background-color: transparent;
+  border: 1px solid rgb(204, 204, 204);
+  border-radius: 5px;
+  padding: $small-size;
+  min-width: $extra-large-size * 3;
+  max-width: $extra-large-size * 10;
+  width: 100%;
+  height: $large-size * 2;
+  font-size: $medium-size * 1.5;
+  text-align: center;
+}
+
+.input-container-items {
+  margin-top: $extra-large-size;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.input-container-items__item {
+  border: 1px solid black;
+  height: $extra-large-size * 4;
+  display: flex;
+  padding: $medium-size;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  font-size: $medium-size * 1.5;
+  flex-direction: column;
+  margin: $small-size * 2.5;
+
+  @media (min-width: 40rem) {
+    width: 47%;
+  }
+
+  @media (min-width: 56rem) {
+    width: 30%;
+  }
+
+  @media (min-width: 65rem) {
+    width: 23%;
+  }
+}
+
+.input-container-items__item-headline {
+  white-space: nowrap;
+  width: 100%;
+  overflow: hidden;
+  text-align: center;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+}
+
+.rating {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+}
+.rating > span {
+  display: inline-block;
+  position: relative;
+  width: 1.1em;
+}
+.rating > span:hover:before,
+.rating > span:hover ~ span:before {
+  content: "\2605";
+  color: orange;
+  position: absolute;
+  cursor: pointer;
+}

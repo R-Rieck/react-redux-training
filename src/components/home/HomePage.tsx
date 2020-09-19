@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 
 export const Homepage = () => (
-  <div className="jumbotron">
+  <div className="content-container">
     <h1>Pluralsight Administration</h1>
     <p>React, Redux and React Router for ultra-responsive web apps.</p>
     <Link to="about" className="btn btn-primary btn-lg">

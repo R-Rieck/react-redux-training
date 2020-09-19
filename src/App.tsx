@@ -4,11 +4,11 @@ import { Homepage } from "./components/home/HomePage";
 import { Aboutpage } from "./components/about/AboutPage";
 import { Header } from "./components/common/header";
 import { pageNotFound } from "./components/PageNotFound";
-import { CoursesPage } from "./components/courses/CoursesPage";
+import CoursesPage from "./components/courses/CoursesPage";
 
 export default function App() {
   return (
-    <div className="container-fluid">
+    <div className="main-container">
       <Header />
       <Switch>
         <Route exact path="/" component={Homepage} />
