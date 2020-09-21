@@ -7,11 +7,13 @@
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "@types/jest": "^24.0.0",
+    "@types/json-server": "^0.14.2",
     "@types/node": "^12.0.0",
     "@types/react": "^16.9.49",
     "@types/react-dom": "^16.9.8",
     "@types/react-redux": "^7.1.9",
     "@types/react-router-dom": "^5.1.5",
+    "json-server": "^0.16.1",
     "node-sass": "^4.14.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
@@ -25,9 +27,10 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "start-all": "run-p start:api start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "prestart:api": "node mockApi/createMockDb.js",
+    "start:api": "node mockApi/apiServer.js"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -47,6 +50,7 @@
   "devDependencies": {
     "@types/redux-immutable-state-invariant": "^2.1.1",
     "font-awesome": "^4.7.0",
+    "npm-run-all": "^4.1.5",
     "redux-immutable-state-invariant": "^2.1.0",
     "redux-thunk": "^2.3.0"
   }
